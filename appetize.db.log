@@ -1,81 +1,16 @@
-/*C62*/SET SCHEMA PUBLIC
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,4 kg sera twarogowego')
+/*C23*/SET SCHEMA PUBLIC
+INSERT INTO RECIPE VALUES(68,5.0E0,'appetizer',5.0E0,FALSE,'Rrr',2,'D40pGR6zjgUEb0NBpE2CKR3NO8G3',NULL)
+INSERT INTO RECIPE_INGREDIENT_LIST VALUES(68,'w','www')
+INSERT INTO RECIPE_STEP_LIST VALUES(68,'100% 23:32kwestiasmaku.com/przepis/lemo1 limonka1 pomara\u0144cza6 ty\u017cek cukru******1 litr wody niegazowanej1gat\u0105zka mi\u0119tyPRZYGOTOWANIEImbir obra\u0107, nast\u0119pnie zetrze\u0107 na drobnej tarce i\u000aw\u0142o\u017cy\u0107 do dzbanka.Owoce dok\u0142adnie wyszorowa\u0107, nast\u0119pnie przekroi\u0107\u000ana po\u0142\u00f3wki. Ukroi\u0107 po 2 plasterki ka\u017cdego z owoc\u00f3w i\u000adoda\u0107 do dzbanka z imbirem. Zasypa\u0107 cukrem.Z reszty owoc\u00f3w wycisn\u0105\u0107 sok i wla\u0107 do\u000adzbanka. Doda\u0107 wod\u0119 oraz listki mi\u0119ty. Dok\u0142adnie\u000awymiesza\u0107.ZWSKAZ\u00d3WKIW wersji fit - mo\u017cna cukier zast\u0105pi\u0107 miodem (ok. 1 2\u000ay\u017cki).',0,1)
 COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,4 kg sera twarogowego'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'maka')
+DELETE FROM RECIPE_INGREDIENT_LIST WHERE RECIPE_RID=68 AND AMOUNT='w' AND INGREDIENT_NAME='www'
+DELETE FROM RECIPE_STEP_LIST WHERE RECIPE_RID=68 AND DESCRIPTION='100% 23:32kwestiasmaku.com/przepis/lemo1 limonka1 pomara\u0144cza6 ty\u017cek cukru******1 litr wody niegazowanej1gat\u0105zka mi\u0119tyPRZYGOTOWANIEImbir obra\u0107, nast\u0119pnie zetrze\u0107 na drobnej tarce i\u000aw\u0142o\u017cy\u0107 do dzbanka.Owoce dok\u0142adnie wyszorowa\u0107, nast\u0119pnie przekroi\u0107\u000ana po\u0142\u00f3wki. Ukroi\u0107 po 2 plasterki ka\u017cdego z owoc\u00f3w i\u000adoda\u0107 do dzbanka z imbirem. Zasypa\u0107 cukrem.Z reszty owoc\u00f3w wycisn\u0105\u0107 sok i wla\u0107 do\u000adzbanka. Doda\u0107 wod\u0119 oraz listki mi\u0119ty. Dok\u0142adnie\u000awymiesza\u0107.ZWSKAZ\u00d3WKIW wersji fit - mo\u017cna cukier zast\u0105pi\u0107 miodem (ok. 1 2\u000ay\u017cki).' AND DURATION=0 AND STEP=1
+INSERT INTO RECIPE_INGREDIENT_LIST VALUES(68,'w','www')
+INSERT INTO RECIPE_STEP_LIST VALUES(68,'100% 23:32kwestiasmaku.com/przepis/lemo1 limonka1 pomara\u0144cza6 ty\u017cek cukru******1 litr wody niegazowanej1gat\u0105zka mi\u0119tyPRZYGOTOWANIEImbir obra\u0107, nast\u0119pnie zetrze\u0107 na drobnej tarce i\u000aw\u0142o\u017cy\u0107 do dzbanka.Owoce dok\u0142adnie wyszorowa\u0107, nast\u0119pnie przekroi\u0107\u000ana po\u0142\u00f3wki. Ukroi\u0107 po 2 plasterki ka\u017cdego z owoc\u00f3w i\u000adoda\u0107 do dzbanka z imbirem. Zasypa\u0107 cukrem.Z reszty owoc\u00f3w wycisn\u0105\u0107 sok i wla\u0107 do\u000adzbanka. Doda\u0107 wod\u0119 oraz listki mi\u0119ty. Dok\u0142adnie\u000awymiesza\u0107.ZWSKAZ\u00d3WKIW wersji fit - mo\u017cna cukier zast\u0105pi\u0107 miodem (ok. 1 2\u000ay\u017cki).',0,1)
+INSERT INTO RECIPE_STEP_LIST VALUES(68,'Connection URLThe normal method of accessing a HyperSQL catalog is via the JDBC Connection interface. An introduction to different methods of providing database services and accessing\u000aand examples of how to connect via JDBC are provided in our JavaDoc for JDBCConnection.A uniform method is used to distinguish between different types of connection. The common driver identifer is jdbe: hsqldb : followed by a protocol identifier (nem: file: res:\u000aidentifiers in the case of servers, then followed by database identifier. Additional property/value pairs can be appended to the end of the URL, separated with semicolons.Table 13.1. Memory Database URLDriver and ProtocolHost and Port ExampleDatabase Ejdbc:hsqldb: mem:not availlableaccountsLOwercase, single-word identifier creates the in-memory database when the first connection is made. Subsequent use of the same Connection URL connects to the existing DBThe old form for the URL, jdbc:hsqldb:. creates or connects to the same database as the new form for the URL. jdbc : hsqldb:mem: .Table 13.2. File Database URLHost and Port Example\u000anot availableDriver and ProtocolDatabase Fjdbc: hsqldb: file:accounts/opt/db/ac\u000aC:/data/myThe file path specifies the database files. It should consist of a relative or absolute path to the directory containing the database files, followed by a " and the database name. In\u000afiles in the directory where the java command for running the application was issued. The second and third examples refer to absolute paths on the host machine: For example,accounts database.Table 13.3. Resource Database URLDatabase ExarHost and Port Example\u000anot available\u000aDatabase files can be loaded from one of the iars specified as part of the Java command the same way as resource files are accessed in Java progranms. The /adirectory above stiDriver and Protocol/adirectory/dEjdbc:hsqldb: res',0,2)
 COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='maka'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'maka')
-COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='maka'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 kg jablek')
-COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='maka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,5 kg jablek'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 kg jablek')
-COMMIT
-/*C63*/SET SCHEMA PUBLIC
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='maka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,5 kg jablek'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 kg jablek')
-COMMIT
-/*C62*/DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='maka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,5 kg jablek'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 kg jablek')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,3 l mleka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 szkl. maki')
-COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='maka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,5 kg jablek'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,3 l mleka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='0,5 szkl. maki'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,5 kg jablek')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,3 l mleka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,5 szkl. maki')
-COMMIT
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=FALSE AND ITEM_NAME='1 jajko'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,4 kg sera twarogowego'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='maka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,5 kg jablek'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,3 l mleka'
-DELETE FROM SHOPPING_LIST_ITEMS_LIST WHERE SHOPPING_LIST_LID=11 AND BOUGHT=TRUE AND ITEM_NAME='0,5 szkl. maki'
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'1 jajko')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,4 kg sera twarogowego')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'maka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,FALSE,'0,5 kg jablek')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,3 l mleka')
-INSERT INTO SHOPPING_LIST_ITEMS_LIST VALUES(11,TRUE,'0,5 szkl. maki')
+DELETE FROM RECIPE_INGREDIENT_LIST WHERE RECIPE_RID=68 AND AMOUNT='w' AND INGREDIENT_NAME='www'
+DELETE FROM RECIPE_STEP_LIST WHERE RECIPE_RID=68 AND DESCRIPTION='100% 23:32kwestiasmaku.com/przepis/lemo1 limonka1 pomara\u0144cza6 ty\u017cek cukru******1 litr wody niegazowanej1gat\u0105zka mi\u0119tyPRZYGOTOWANIEImbir obra\u0107, nast\u0119pnie zetrze\u0107 na drobnej tarce i\u000aw\u0142o\u017cy\u0107 do dzbanka.Owoce dok\u0142adnie wyszorowa\u0107, nast\u0119pnie przekroi\u0107\u000ana po\u0142\u00f3wki. Ukroi\u0107 po 2 plasterki ka\u017cdego z owoc\u00f3w i\u000adoda\u0107 do dzbanka z imbirem. Zasypa\u0107 cukrem.Z reszty owoc\u00f3w wycisn\u0105\u0107 sok i wla\u0107 do\u000adzbanka. Doda\u0107 wod\u0119 oraz listki mi\u0119ty. Dok\u0142adnie\u000awymiesza\u0107.ZWSKAZ\u00d3WKIW wersji fit - mo\u017cna cukier zast\u0105pi\u0107 miodem (ok. 1 2\u000ay\u017cki).' AND DURATION=0 AND STEP=1
+DELETE FROM RECIPE_STEP_LIST WHERE RECIPE_RID=68 AND DESCRIPTION='Connection URLThe normal method of accessing a HyperSQL catalog is via the JDBC Connection interface. An introduction to different methods of providing database services and accessing\u000aand examples of how to connect via JDBC are provided in our JavaDoc for JDBCConnection.A uniform method is used to distinguish between different types of connection. The common driver identifer is jdbe: hsqldb : followed by a protocol identifier (nem: file: res:\u000aidentifiers in the case of servers, then followed by database identifier. Additional property/value pairs can be appended to the end of the URL, separated with semicolons.Table 13.1. Memory Database URLDriver and ProtocolHost and Port ExampleDatabase Ejdbc:hsqldb: mem:not availlableaccountsLOwercase, single-word identifier creates the in-memory database when the first connection is made. Subsequent use of the same Connection URL connects to the existing DBThe old form for the URL, jdbc:hsqldb:. creates or connects to the same database as the new form for the URL. jdbc : hsqldb:mem: .Table 13.2. File Database URLHost and Port Example\u000anot availableDriver and ProtocolDatabase Fjdbc: hsqldb: file:accounts/opt/db/ac\u000aC:/data/myThe file path specifies the database files. It should consist of a relative or absolute path to the directory containing the database files, followed by a " and the database name. In\u000afiles in the directory where the java command for running the application was issued. The second and third examples refer to absolute paths on the host machine: For example,accounts database.Table 13.3. Resource Database URLDatabase ExarHost and Port Example\u000anot available\u000aDatabase files can be loaded from one of the iars specified as part of the Java command the same way as resource files are accessed in Java progranms. The /adirectory above stiDriver and Protocol/adirectory/dEjdbc:hsqldb: res' AND DURATION=0 AND STEP=2
+DELETE FROM RECIPE WHERE RID=68
 COMMIT
